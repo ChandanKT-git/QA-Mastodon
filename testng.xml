@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Mastodon Social Test Suite">
+    <test name="Login Tests">
+        <classes>
+            <class name="com.mastodon.tests.LoginTest" />
+        </classes>
+    </test>
+    <test name="Home Page Tests">
+        <classes>
+            <class name="com.mastodon.tests.HomePageTest" />
+        </classes>
+    </test>
+    <test name="Explore Page Tests">
+        <classes>
+            <class name="com.mastodon.tests.ExplorePageTest" />
+        </classes>
+    </test>
+    <test name="Settings Page Tests">
+        <classes>
+            <class name="com.mastodon.tests.SettingsPageTest" />
+        </classes>
+    </test>
+    <test name="Notifications Page Tests">
+        <classes>
+            <class name="com.mastodon.tests.NotificationsPageTest" />
+        </classes>
+    </test>
+    <test name="Messages Page Tests">
+        <classes>
+            <class name="com.mastodon.tests.MessagesPageTest" />
+        </classes>
+    </test>
+</suite>
