@@ -31,4 +31,21 @@
             <class name="com.mastodon.tests.MessagesPageTest" />
         </classes>
     </test>
+    <test name="Exception Handling Tests">
+        <classes>
+            <class name="com.mastodon.tests.ExceptionHandlingDemoTest" />
+            <class name="com.mastodon.tests.PageObjectExceptionHandlingTest" />
+        </classes>
+    </test>
+    <!-- Synchronization Test Classes -->
+    <test name="Synchronization Tests">
+        <classes>
+            <class name="com.mastodon.tests.WebDriverAndElementMethodsTest" />
+            <class name="com.mastodon.tests.ExplorePageSynchronizationTest" />
+            <class name="com.mastodon.tests.LoginSynchronizationTest" />
+            <class name="com.mastodon.tests.NotificationsSynchronizationTest" />
+            <class name="com.mastodon.tests.MessagesSynchronizationTest" />
+            <class name="com.mastodon.tests.HomeSynchronizationTest" />
+        </classes>
+    </test>
 </suite>

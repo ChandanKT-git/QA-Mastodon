@@ -92,7 +92,7 @@ public class MessagesPageTest extends BaseTest {
     @Test(description = "Test selecting a conversation", enabled = false)
     public void testSelectConversation() {
         // Select the first conversation
-        messagesPage.selectConversation(0);
+        messagesPage.selectConversation("validUsername");
 
         // Verify that conversation is selected
         // This would require a method to check if the conversation is selected

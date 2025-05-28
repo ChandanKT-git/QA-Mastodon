@@ -108,7 +108,7 @@ public class ExplorePageTest extends BaseTest {
     public void testSearchWithSpecialCharacters() {
         // Perform search with special characters
         String searchQuery = "#mastodon";
-        var searchResultsPage = explorePage.search(searchQuery);
+        SearchResultsPage searchResultsPage = explorePage.search(searchQuery);
 
         // Verify that search results page is loaded
         Assert.assertTrue(searchResultsPage.isSearchResultsPageLoaded(), "Search results page should be loaded");

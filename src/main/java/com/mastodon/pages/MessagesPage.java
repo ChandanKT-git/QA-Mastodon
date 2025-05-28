@@ -88,10 +88,19 @@ public class MessagesPage extends BasePage {
      * @param username Username to select
      * @return MessagesPage instance for method chaining
      */
-    public MessagesPage selectConversation(int username) {
-        WebElement conversation = waitForVisibility(org.openqa.selenium.By.xpath(
-                "//div[contains(@class, 'conversation') and contains(., '" + i + "')]"));
+    public MessagesPage selectConversation(String username) {
+        WebElement conversation = waitForVisibility(org.openqa.selenium.By
+                .xpath("//div[contains(@class, 'conversation') and contains(., '" + username + "')]"));
         click(conversation);
         return this;
+    }
+
+    /**
+     * Check if compose form is displayed
+     * 
+     * @return true if compose form is displayed, false otherwise
+     */
+    public boolean isComposeFormDisplayed() {
+        return isElementDisplayed(messageTextArea);
     }
 }
