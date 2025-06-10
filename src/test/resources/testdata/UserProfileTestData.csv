@@ -1,0 +1,11 @@
+firstName,lastName,email,bio,location,website,birthDate,testScenario
+John,Doe,john.doe@example.com,Software Developer passionate about open source,New York,https://johndoe.dev,1990-05-15,Complete profile
+Jane,Smith,jane.smith@mastodon.social,Digital artist and photographer,Los Angeles,https://janesmith.art,1985-12-03,Artist profile
+Alex,Johnson,alex.j@example.com,Tech enthusiast and blogger,,https://alexblog.com,1992-08-20,Missing location
+Sarah,Wilson,sarah.w@example.com,UX Designer,San Francisco,,1988-03-10,Missing website
+Mike,Brown,mike.brown@example.com,,,,,Minimal profile
+Emily,Davis,emily.davis@mastodon.social,Community manager and social media expert,Seattle,https://emilydavis.social,1991-11-25,Social media expert
+David,Miller,david.m@example.com,Full-stack developer,Austin,https://davidmiller.dev,1987-07-08,Developer profile
+Lisa,Garcia,lisa.garcia@example.com,Marketing specialist,Miami,https://lisagarcia.marketing,1993-02-14,Marketing profile
+Tom,Anderson,tom.anderson@mastodon.social,Open source contributor,Portland,https://github.com/tomanderson,1989-09-30,Open source contributor
+Anna,Taylor,anna.taylor@example.com,Data scientist and AI researcher,Boston,https://annataylor.ai,1986-04-18,AI researcher profile

@@ -1,0 +1,11 @@
+username,password,expectedResult,testDescription
+valid_user@example.com,ValidPass123,success,Valid login credentials
+invalid_user@example.com,WrongPass,failure,Invalid password
+test_user@mastodon.social,TestPass456,success,Valid Mastodon user
+,ValidPass123,failure,Empty username
+user@example.com,,failure,Empty password
+invalid_email,ValidPass123,failure,Invalid email format
+user@example.com,short,failure,Password too short
+admin@mastodon.social,AdminPass789,success,Admin user login
+test123@example.com,TempPass999,success,Temporary user account
+blocked_user@example.com,BlockedPass,blocked,Blocked user account

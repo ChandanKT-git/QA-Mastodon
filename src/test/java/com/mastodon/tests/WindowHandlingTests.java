@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.mastodon.pages.HomePage;
 import com.mastodon.pages.LoginPage;
+import com.mastodon.utils.ConfigUtils;
 
 public class WindowHandlingTests {
     private WebDriver driver;
@@ -21,7 +22,7 @@ public class WindowHandlingTests {
     public void setUp() {
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
-        homePage = loginPage.login("chandukt29092004@gmail.com", "Chan@QA24");
+        homePage = loginPage.login(ConfigUtils.getMastodonEmail(), ConfigUtils.getMastodonPassword());
         parentWindowHandle = driver.getWindowHandle();
     }
 

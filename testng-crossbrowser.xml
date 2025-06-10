@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Cross-Browser Testing Configuration -->
+<suite name="Mastodon Cross-Browser Test Suite" parallel="tests" thread-count="3" verbose="2">
+    
+    <!-- Global Parameters -->
+    <parameter name="baseUrl" value="https://mastodon.social"/>
+    <parameter name="timeout" value="30"/>
+    <parameter name="environment" value="test"/>
+    
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="com.mastodon.utils.TestNGCustomListener"/>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+    </listeners>
+    
+    <!-- Chrome Browser Tests -->
+    <test name="Chrome Browser Tests" enabled="true">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="testType" value="chrome-browser"/>
+        
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="ui"/>
+            </run>
+        </groups>
+        
+        <classes>
+            <class name="com.mastodon.tests.LoginTest"/>
+            <class name="com.mastodon.tests.HomePageTest"/>
+            <class name="com.mastodon.tests.ActionClassTests"/>
+            <class name="com.mastodon.tests.JavascriptExecutorTests"/>
+        </classes>
+    </test>
+    
+    <!-- Firefox Browser Tests -->
+    <test name="Firefox Browser Tests" enabled="true">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="testType" value="firefox-browser"/>
+        
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="ui"/>
+            </run>
+        </groups>
+        
+        <classes>
+            <class name="com.mastodon.tests.LoginTest"/>
+            <class name="com.mastodon.tests.HomePageTest"/>
+            <class name="com.mastodon.tests.ActionClassTests"/>
+            <class name="com.mastodon.tests.JavascriptExecutorTests"/>
+        </classes>
+    </test>
+    
+    <!-- Edge Browser Tests -->
+    <test name="Edge Browser Tests" enabled="true">
+        <parameter name="browser" value="edge"/>
+        <parameter name="testType" value="edge-browser"/>
+        
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="ui"/>
+            </run>
+        </groups>
+        
+        <classes>
+            <class name="com.mastodon.tests.LoginTest"/>
+            <class name="com.mastodon.tests.HomePageTest"/>
+            <class name="com.mastodon.tests.ActionClassTests"/>
+            <class name="com.mastodon.tests.JavascriptExecutorTests"/>
+        </classes>
+    </test>
+    
+    <!-- Mobile Chrome Tests (if mobile testing is supported) -->
+    <test name="Mobile Chrome Tests" enabled="false">
+        <parameter name="browser" value="chrome-mobile"/>
+        <parameter name="testType" value="mobile-browser"/>
+        <parameter name="deviceName" value="iPhone 12"/>
+        
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        
+        <classes>
+            <class name="com.mastodon.tests.LoginTest">
+                <methods>
+                    <include name="testValidLogin"/>
+                </methods>
+            </class>
+            <class name="com.mastodon.tests.HomePageTest">
+                <methods>
+                    <include name="testHomePageLoad"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+</suite>
