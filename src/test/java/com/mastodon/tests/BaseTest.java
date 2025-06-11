@@ -14,6 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
     protected WebDriver driver;
+    protected static WebDriver staticDriver;
     protected final String BASE_URL = "https://mastodon.social/home";
 
     /**
@@ -27,6 +28,7 @@ public class BaseTest {
         options.addArguments("--disable-notifications");
 
         driver = new ChromeDriver(options);
+        staticDriver = driver; // Store reference for TestListener
         driver.get(BASE_URL);
     }
 
@@ -37,6 +39,15 @@ public class BaseTest {
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+            staticDriver = null; // Clear static reference
         }
+    }
+    
+    /**
+     * Gets the current WebDriver instance for use in listeners
+     * @return WebDriver instance or null if not initialized
+     */
+    public static WebDriver getDriver() {
+        return staticDriver;
     }
 }

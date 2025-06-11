@@ -153,7 +153,7 @@ public class ScreenshotUtils {
         String fileName = testName + "_" + sanitizedTestData + "_" + timestamp;
         takeScreenshot(fileName);
 
-''    }
+    }
 
     /**
      * Takes a screenshot with custom directory

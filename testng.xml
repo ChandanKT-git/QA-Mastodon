@@ -12,6 +12,7 @@
     
     <!-- Test Listeners for Enhanced Reporting -->
     <listeners>
+        <listener class-name="com.mastodon.utils.TestListener"/>
         <listener class-name="com.mastodon.utils.TestNGCustomListener"/>
         <listener class-name="org.testng.reporters.EmailableReporter"/>
         <listener class-name="org.testng.reporters.JUnitReportReporter"/>
