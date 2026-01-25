@@ -1,4 +1,4 @@
-# Mastodon.social Test Automation Framework  
+# Mastodon.social Test Automation Framework
 
 A comprehensive test automation framework for testing Mastodon.social web application features using Selenium WebDriver, TestNG, and Page Object Model design pattern.
 
